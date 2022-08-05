@@ -98,9 +98,33 @@
         visibility: hidden;
     }
 
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .horizontalLogo {
+        width: 400px;
+        height: 200px;
+    }
+
+    .projectButtonDiv {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projectButton {
+        font-size: xx-large;
+        border: 3px solid darkslategray;
+        margin: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
     button:hover {
         background-color: #4fa7f3;
-        border-color: #4fa7f3;
+        border-color: #007be7;
     }
 
     button:active {
@@ -123,11 +147,32 @@
 
     <div class="projects">
         <div class="project" id="project-pybackup">
+            <img src="./assets/logos/pybackup.png" alt="PyBackup logo" class="horizontalLogo">
             <h1 class="projectName" id="projectName-pybackup">PyBackup</h1>
             <hr>
             <h2 class="projectDesc" id="projectDesc-pybackup">An automatic backup program written in Python</h2>
-            <h2 class="projectLink" id="projectLink-pybackup"><a href="https://github.com/Gitko01/website">https://github.com/Gitko01/website</a></h2>
-            <img src="./assets/logos/pybackup.png" alt="PyBackup logo">
+            <h2 class="projectLink" id="projectLink-pybackup"><a href="https://github.com/Gitko01/PyBackup">https://github.com/Gitko01/PyBackup</a></h2>
+            <div class="projectButtonDiv" id="projectButtonDiv-pybackup">
+                <a href="/assets/project_releases/PyBackup.zip" download="PyBackup">
+                    <button class="projectButton" id="projectButton-pybackup-download" type="button">Download</button> 
+                </a> 
+            </div>
+        </div> 
+
+        <div class="project" id="project-tbbc">
+            <img src="./assets/logos/tbbc.png" alt="TBBC logo" class="logo">
+            <h1 class="projectName" id="projectName-tbbc">The Below Bedrock Caves</h1>
+            <hr>
+            <h2 class="projectDesc" id="projectDesc-tbbc">A Minecraft mod made using Fabric</h2>
+            <h2 class="projectLink" id="projectLink-tbbc"><a href="https://github.com/Gitko01/BelowBedrockCaves">https://github.com/Gitko01/BelowBedrockCaves</a></h2>
+            <div class="projectButtonDiv" id="projectButtonDiv-tbbc">
+                <button class="projectButton" id="projectButton-tbbc-download-curse" type="button" onclick="location.assign('https://www.curseforge.com/minecraft/mc-mods/the-below-bedrock-caves')">CurseForge Download</button> 
+                <button class="projectButton" id="projectButton-tbbc-download-modrinth" type="button" onclick="location.assign('https://modrinth.com/mod/the_below_bedrock_caves')">Modrinth Download</button> 
+                <a href="/assets/project_releases/below-bedrock-caves-1.0.0-1.19.1.jar" download="below-bedrock-caves-1.0.0-1.19.1.jar">
+                    <button class="projectButton" id="projectButton-tbbc-download" type="button">Direct Download</button> 
+                </a> 
+                <button class="projectButton" id="projectButton-tbbc-wiki" type="button" onclick="location.assign('http://127.0.0.1:5500/tbbc_wiki/index.html')">Wiki</button> 
+            </div>
         </div> 
     </div>
 
@@ -139,152 +184,5 @@
     </div>
 
 </body>
-
-<script>
-
-    var darkMode = false;
-
-    function refreshPage() {
-        location.reload()
-    }
-
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
-      
-    async function bgColorChange(mode) {
-        let startColor;
-        let endColor;
-        let currentColor;
-        let done = false;
-
-        if (mode == true) {
-            startColor = 50
-            endColor = 35
-
-            currentColor = startColor;
-
-            done = false
-        } else {
-            startColor = 255
-            endColor = 220
-
-            currentColor = startColor;
-
-            done = false
-        }
-
-        while (mode == darkMode) {
-            if (mode == true) {
-                // dark
-
-                // kinda bad system lol
-                
-                document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-
-                if (currentColor > endColor && done == false) {
-                    currentColor -= 1
-                    document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-                } else if (currentColor == endColor) {
-                    done = true;         
-                }
-
-                if (currentColor < startColor && done == true) {
-                    currentColor += 1
-                    document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-                } else if (currentColor == startColor) {
-                    done = false;
-                }
-
-                
-            } else {
-                // light
-
-                document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-
-                if (currentColor > endColor && done == false) {
-                    currentColor -= 5
-                    document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-                } else if (currentColor == endColor) {
-                    done = true;         
-                }
-
-                if (currentColor < startColor && done == true) {
-                    currentColor += 5
-                    document.body.style.backgroundColor = `rgb(${currentColor}, ${currentColor}, ${currentColor})`
-                } else if (currentColor == startColor) {
-                    done = false;
-                }
-            }
-            await sleep(1000);
-        }
-    }
-    
-    function changeColorMode() {
-        if (darkMode) {
-            // light mode
-            darkMode = false;
-            document.getElementById('page-title').style.color = "#0e0e0e"
-
-            for (let i = 0; i < document.getElementsByClassName('subtitle').length; i++) {
-                document.getElementsByClassName('subtitle')[i].style.color = "#0e0e0e"
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('title-left').length; i++) {
-                document.getElementsByClassName('title-left')[i].style.color = "#0e0e0e"
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('project').length; i++) {
-                document.getElementsByClassName('project')[i].style.backgroundColor = 'grey'
-                document.getElementsByClassName('project')[i].style.border = '3px solid #484848'
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('textSection').length; i++) {
-                document.getElementsByClassName('textSection')[i].style.backgroundColor = 'grey'
-                document.getElementsByClassName('textSection')[i].style.border = '3px solid #484848'
-            }
-
-            document.getElementById('colorModeButton').textContent = "Dark Mode"
-            document.body.style.backgroundColor = "white"
-
-            bgColorChange(darkMode)
-        } else {
-            // dark mode
-            darkMode = true;
-            document.getElementById('page-title').style.color = "white"
-
-            for (let i = 0; i < document.getElementsByClassName('subtitle').length; i++) {
-                document.getElementsByClassName('subtitle')[i].style.color = "white"
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('title-left').length; i++) {
-                document.getElementsByClassName('title-left')[i].style.color = "white"
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('project').length; i++) {
-                document.getElementsByClassName('project')[i].style.backgroundColor = '#141414'
-                document.getElementsByClassName('project')[i].style.border = '3px solid #484848'
-            }
-
-            for (let i = 0; i < document.getElementsByClassName('textSection').length; i++) {
-                document.getElementsByClassName('textSection')[i].style.backgroundColor = '#141414'
-                document.getElementsByClassName('textSection')[i].style.border = '3px solid #484848'
-            }
-
-            document.getElementById('colorModeButton').textContent = "Light Mode"
-            document.body.style.backgroundColor = "#323232"
-
-            bgColorChange(darkMode)
-        }
-    }
-    
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        darkMode = false;
-        changeColorMode()
-    } else {
-        darkMode = true;
-        changeColorMode()
-    }
-</script>
-
+<script src="script.js"></script>
 </html>

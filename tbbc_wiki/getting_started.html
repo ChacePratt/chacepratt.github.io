@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Below Bedrock Caves Wiki</title>
+</head>
+<style>
+    .pagetitle {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+        font-size: 80px;
+    }
+
+    .pagetitle-button {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background: none;
+        border: none;
+        margin: 0px;
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+    }
+
+    .title-left {
+        text-align: left;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+        font-size: 45px;
+    }
+
+    .title-mid {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+        font-size: 45px;
+    }
+
+    .colorModeButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        background-color: #141414;
+        width: fit-content;
+        border: 3px solid #484848;
+        margin: 10px;
+    }
+
+    .projectName {
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    .projectDesc {
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .projectLink {
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .textSection {
+        background-color: #141414;
+        width: fit-content;
+        border: 3px solid #484848;
+        margin: 5px;
+    }
+
+    .textSectionText {
+        color: white;
+        font-size: 24px;
+        text-align: left;
+        margin: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .invisible {
+        display: none;
+        visibility: hidden;
+    }
+
+    .wikiButtons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .wikiButton {
+        font-size: xx-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .wikiSubButton {
+        font-size: x-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .returnButton {
+        font-size: x-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .center-bottom {
+        position: fixed;
+        left: 25%;
+        width: 50%;
+        display: flex;
+        justify-content: center; 
+        bottom: 5px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .wikiImg {
+        width: 50%;
+        height: 50%;
+        padding: 10px;
+    }
+
+    button:hover {
+        background-color: #4fa7f3;
+        border-color: #007be7;
+    }
+
+    button:active {
+        background-color: #1688ec;
+    }
+</style>
+
+<body>
+    <button class="colorModeButton" id="colorModeButton" onclick="changeColorMode()">Dark Mode</button>
+
+    <div class="center">
+        <button class="pagetitle-button" id="page-title" onclick="location.assign('./index.html')">Below Bedrock Caves Wiki</button>
+    </div>
+
+    <hr>
+    <h1 class="title-mid">Getting Started</h1>
+    <hr>
+
+    <h2 class="title-left" id="ironslate">Ironslate</h2>
+    <div class="textSection">
+        <p class="textSectionText">To get started with the creation of the portal, you will need at least 16 ironslate blocks. <br> Each ironslate block requires 5 deepslate and 4 iron. <br> In total, you will need 64 iron ingots and 80 deepslate.</p>
+        <img class="wikiImg" src="../assets/tbbc_wiki/ironslate-recipe.png" alt="Ironslate recipe">
+    </div>
+
+    <h2 class="title-left" id="tbbc_gem">TBBC Gem</h2>
+    <div class="textSection">
+        <p class="textSectionText">The next thing you need is a tbbc gem. This gem ignites the portal. It requires <br> one lapis block, one diamond block, one iron block, one redstone block, one obsidian block, <br> one gold block, one copper block, one emerald block, and one coal block.</p>
+        <img class="wikiImg" src="../assets/tbbc_wiki/tbbc_gem-recipe.png" alt="TBBC gem recipe">
+    </div>
+
+    <h2 class="title-left" id="portal">Portal</h2>
+    <div class="textSection">
+        <p class="textSectionText">The portal looks like this. It is a 5x5 flat portal made of ironslate. <br> It is ignited by a tbbc gem, similar to a nether portal.</p>
+        <img class="wikiImg" src="../assets/tbbc_wiki/portal.png" alt="TBBC portal">
+    </div>
+
+    <div class="center-bottom">
+        <button class="returnButton" id="returnButton" onclick="location.assign('./index.html')">Back to Wiki Homepage</button>
+    </div>
+</body>
+<script src="../script.js"></script>
+</html>
