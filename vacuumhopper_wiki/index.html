@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacuum Hopper Wiki</title>
+</head>
+<style>
+    .pagetitle {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+        font-size: 80px;
+    }
+
+    .pagetitle-button {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        background: none;
+        border: none;
+        margin: 0px;
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    .title-mid {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 0px;
+        font-size: 45px;
+    }
+
+    .colorModeButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .invisible {
+        display: none;
+        visibility: hidden;
+    }
+
+    .wikiButtons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .wikiButton {
+        font-size: xx-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .wikiSubButton {
+        font-size: x-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .returnButton {
+        font-size: x-large;
+        border: 3px solid darkslategray;
+        margin: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+    }
+
+    .center-bottom {
+        position: absolute;
+        left: 25%;
+        width: 50%;
+        display: flex;
+        justify-content: center; 
+        bottom: 10px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    button:hover {
+        background-color: #4fa7f3;
+        border-color: #007be7;
+    }
+
+    button:active {
+        background-color: #1688ec;
+    }
+</style>
+
+<body>
+    <button class="colorModeButton" id="colorModeButton" onclick="changeColorMode()">Dark Mode</button>
+
+    <div class="center">
+        <button class="pagetitle-button" id="page-title" onclick="location.assign('./index.html')">Vacuum Hopper Wiki</button>
+    </div>
+    
+    <hr>
+    <h1 class="title-mid">Table of Contents</h1>
+    <hr>
+    <div class="wikiButtons">
+        <button class="wikiButton" id="wikiButton-vacuumhopper-installing" onclick="location.assign('installing.html')">Installing</button>
+        <button class="wikiButton" id="wikiButton-vacuumhopper-gettingStarted" onclick="location.assign('getting_started.html')">Getting Started</button>
+    </div>
+
+    <div class="center-bottom">
+        <button class="returnButton" id="returnButton" onclick="location.assign('../index.html')">Back to Homepage</button>
+    </div>
+    
+</body>
+<script src="../script.js"></script>
+</html>
