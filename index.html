@@ -68,6 +68,16 @@
         margin-bottom: 10px;
     }
 
+    .projectDescLegacy {
+        color: red;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
     .projectLink {
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -205,11 +215,39 @@
             </div>
         </div> 
 
+        <div class="project" id="project-hullabaloo">
+            <img src="./assets/logos/hullabaloo.png" alt="Hullabaloo logo" class="logo">
+            <h1 class="projectName" id="projectName-hullabaloo">Hullabaloo</h1>
+            <hr>
+            <h2 class="projectDesc" id="projectDesc-hullabaloo">A random collection of things I thought would be nice to have in Minecraft</h2>
+            <h2 class="projectLink" id="projectLink-hullabaloo"><a href="https://github.com/Gitko01/Hullabaloo">https://github.com/Gitko01/Hullabaloo</a></h2>
+            <div class="projectButtonDiv" id="projectButtonDiv-hullabaloo">
+                <button class="projectButton" id="projectButton-hullabaloo-download-curse" type="button" onclick="location.assign('https://www.curseforge.com/minecraft/mc-mods/hullabaloo')">CurseForge Download</button> 
+                <button class="projectButton" id="projectButton-hullabaloo-download-modrinth" type="button" onclick="location.assign('https://modrinth.com/mod/hullabaloo')">Modrinth Download</button> 
+                <button class="projectButton" id="projectButton-hullabaloo-download" type="button" onclick="location.assign('/download_pages/hullabaloo.html')">Direct Download</button> 
+
+                <button class="projectButton" id="projectButton-hullabaloo-installation" type="button" onclick="location.assign('/hullabaloo/installation.html')">Installation</button> 
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h1 class="title-left">About Me</h1>
+    <hr>
+    <div class="textSection">
+        <p class="textSectionText">Hello! My name is Chace (aka Gitko) and I love to program little projects that I am interested in (like this website and the projects you see above) for fun! Usually I will program stuff related to games, but sometimes I will develop apps that I use daily and that I would feel others might use daily.</p>
+    </div>
+
+    <hr>
+    <h1 class="title-left">Legacy Projects</h1>
+    <hr>
+    <div class="projects" id="legacyProjects">
         <div class="project" id="project-blockactivators">
             <img src="./assets/logos/blockactivators.png" alt="Block Activators logo" class="logo">
             <h1 class="projectName" id="projectName-blockactivators">Block Activators</h1>
             <hr>
             <h2 class="projectDesc" id="projectDesc-blockactivators">A Minecraft mod that adds in a replica of the Autonomous Activator from Thermal Expansion</h2>
+            <h2 class="projectDescLegacy" id="projectDesc2-blockactivators">*** MERGED INTO HULLABALOO ***</h2>
             <h2 class="projectLink" id="projectLink-blockactivators"><a href="https://github.com/Gitko01/BlockActivators">https://github.com/Gitko01/BlockActivators</a></h2>
             <div class="projectButtonDiv" id="projectButtonDiv-blockactivators">
                 <button class="projectButton" id="projectButton-blockactivators-download-curse" type="button" onclick="location.assign('https://www.curseforge.com/minecraft/mc-mods/block-activators')">CurseForge Download</button> 
@@ -225,6 +263,7 @@
             <h1 class="projectName" id="projectName-vacuumhopper">Vacuum Hopper</h1>
             <hr>
             <h2 class="projectDesc" id="projectDesc-vacuumhopper">A Minecraft mod made using Fabric that adds in a remake of the vacuum hopper from OpenBlocks</h2>
+            <h2 class="projectDescLegacy" id="projectDesc2-vacuumhopper">*** MERGED INTO HULLABALOO ***</h2>
             <h2 class="projectLink" id="projectLink-vacuumhopper"><a href="https://github.com/Gitko01/VacuumHopper">https://github.com/Gitko01/VacuumHopper</a></h2>
             <div class="projectButtonDiv" id="projectButtonDiv-vacuumhopper">
                 <button class="projectButton" id="projectButton-vacuumhopper-download-curse" type="button" onclick="location.assign('https://www.curseforge.com/minecraft/mc-mods/vacuum-hopper')">CurseForge Download</button> 
@@ -234,13 +273,6 @@
                 <button class="projectButton" id="projectButton-vacuumhopper-wiki" type="button" onclick="location.assign('/vacuumhopper_wiki/index.html')">Wiki</button> 
             </div>
         </div>
-    </div>
-
-    <hr>
-    <h1 class="title-left">About Me</h1>
-    <hr>
-    <div class="textSection">
-        <p class="textSectionText">Hello! My name is Chace (aka Gitko) and I love to program little projects that I am interested in (like this website and the projects you see above) for fun! Usually I will program stuff related to games, but sometimes I will develop apps that I use daily and that I would feel others might use daily.</p>
     </div>
 
 </body>
