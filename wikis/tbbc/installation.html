@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+    <link rel="icon" href="/assets/images/logos/tbbc.png">
+    <title>TBBC Wiki</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 class="wikiTitle" onclick="redirect('/wikis/tbbc/index.html')">The Below Bedrock Caves Wiki</h1>
+        <button onclick="toggleTheme()" id="themeButton" class="themeButton" title="Theme"><img id="themeIcon" class="themeButtonImg" src="/assets/images/icons/sun.png" alt="Theme icon"></button>
+        <button onclick="redirect('/wikis/tbbc/index.html')" class="homeHeaderButton" title="Home"><img class="homeHeaderButtonImg" src="/assets/images/icons/home_white.png" alt="Home icon"></button>
+    </header>
+
+    <div id="content" class="content">
+        <h1 class="pageSectionTitle">Installation</h1>
+        <hr>
+
+        <h2 class="pageSectionTitle" id="fabricInstallation">Fabric Installation</h2>
+        <p class="wikiTextSection">This mod requires an installation of the Fabric mod loader for Minecraft to run. It also requires the Fabric API. <br> You can find the guide to installing Fabric here: <a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Installation for Minecraft Launcher</a></p>
+
+        <h2 class="pageSectionTitle" id="modDownload">Mod Download</h2>
+        <div class="wikiTextSection">
+            <p class="wikiText">There are a couple places you can download my mod from. Take your pick.</p>
+            <ul class="wikiText">
+                <li><a href="https://www.curseforge.com/minecraft/mc-mods/the-below-bedrock-caves" target="_blank">CurseForge</a></li>
+                <li><a href="https://modrinth.com/mod/the_below_bedrock_caves" target="_blank">Modrinth</a></li>
+                <li><a href="https://github.com/Gitko01/BelowBedrockCaves" target="_blank">GitHub</a></li>
+                <li><a href="/index.html" target="_blank">My website</a></li>
+            </ul>
+        </div>
+
+        <h2 class="pageSectionTitle" id="modInstallation">Mod Installation</h2>
+        <div class="wikiTextSection">
+            <p class="wikiText">Mod installation varies on how and where your Minecraft instance is installed. <br> Some of these options assume you have the mod jar file.</p>
+            <ul class="wikiText">
+                <li>Default installation in MC Launcher (needs jar file): <br> First, download my mod from one of the sources above. <br> Then, hold down the windows key + r and type %appdata%. Proceed to the .minecraft folder, <br> and then go to the mods folder. Drop the jar file for the mod into the mods folder. Done!</li>
+                <br>
+                <li>CurseForge app installation: <br> You should be able to click add more content on the modpack profile and search for the mod. <br> If that fails, download the mod jar file from one of the sources above. <br> After downloaded, go to your modpack profile in File Explorer. <br> You should be able to find the profile's folder by going to the profile's settings and clicking Open Folder. <br> From there, just drag the mod's jar file into the mods folder. </li>
+                <br>
+                <li>MultiMC installation (needs jar file): <br> Find your MC instances folder in MultiMC through the Folders button at the top. <br> In File Manager, find the instance you want, double click it and then double click the .minecraft folder, <br> and drag the mod jar file into the mods folder.  </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/scripts/repositionBody.js"></script>
+<script src="/scripts/redirects.js"></script>
+<script src="/scripts/themeManager.js"></script>

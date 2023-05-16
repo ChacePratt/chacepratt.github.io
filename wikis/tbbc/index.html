@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+    <link rel="icon" href="/assets/images/logos/tbbc.png">
+    <title>TBBC Wiki</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 class="wikiTitle" onclick="redirect('/wikis/tbbc/index.html')">The Below Bedrock Caves Wiki</h1>
+        <button onclick="toggleTheme()" id="themeButton" class="themeButton" title="Theme"><img id="themeIcon" class="themeButtonImg" src="/assets/images/icons/sun.png" alt="Theme icon"></button>
+        <button onclick="redirect('/')" class="homeHeaderButton" title="Home"><img class="homeHeaderButtonImg" src="/assets/images/icons/home_white.png" alt="Home icon"></button>
+    </header>
+
+    <div id="content" class="content">
+        <h1 class="pageSectionTitle">Table of Contents</h1>
+        <hr>
+
+        <div class="leftColumnAlign">
+            <button class="projectButton" onclick="redirect('./installation.html')">Installation</button>
+            <button class="projectButton" onclick="redirect('./getting_started.html')">Getting Started</button>
+            <button class="subWikiButton" onclick="redirect('./getting_started.html#ironslate')">Ironslate</button>
+            <button class="subWikiButton" onclick="redirect('./getting_started.html#tbbcGem')">TBBC Gem</button>
+            <button class="subWikiButton" onclick="redirect('./getting_started.html#portal')">Portal</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/scripts/repositionBody.js"></script>
+<script src="/scripts/redirects.js"></script>
+<script src="/scripts/themeManager.js"></script>

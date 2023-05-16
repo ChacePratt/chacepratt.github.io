@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+    <link rel="icon" href="./duckhunt.icon.png">
+    <title>Duck Hunt</title>
+</head>
+<style>
+    body {
+        cursor: url('cursor.cur') 32 32, auto;
+    }
+</style>
+<body>
+    <header class="header" id="header">
+        <h1 class="pageTitle">Duck Hunt</h1>
+        <button onclick="toggleTheme()" id="themeButton" class="themeButton" title="Theme"><img id="themeIcon" class="themeButtonImg" src="/assets/images/icons/sun.png" alt="Theme icon"></button>
+        <button onclick="redirect('/')" class="homeHeaderButton" title="Home"><img class="homeHeaderButtonImg" src="/assets/images/icons/home_white.png" alt="Home icon"></button>
+    </header>
+
+    <div id="content" class="content">
+        <div class="centered">
+            <canvas id="canvas" width="1024" height="600"></canvas>
+            <script src="duckhunt.js"></script>
+            <script>
+            // canvasResizePolicy NEEDS to be 1
+                const canvasElement = document.querySelector("#canvas");
+                console.log(canvasElement)
+    
+                var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"duckhunt","experimentalVK":false,"fileSizes":{"duckhunt.pck":2868640,"duckhunt.wasm":13789463},"focusCanvas":true,"gdnativeLibs":[]});   
+                engine.startGame({ canvas: canvasElement });
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="/scripts/repositionBody.js"></script>
+<script src="/scripts/redirects.js"></script>
+<script src="/scripts/themeManager.js"></script>
