@@ -49,6 +49,10 @@ var themes = {
             'type': 'class-styles',
             'color': 'white'
         },
+        'projectDownloadsTitle': {
+            'type': 'class-styles',
+            'color': 'white'
+        },
         'project': {
             'type': 'class-styles',
             'background-color': '#696969',
@@ -126,6 +130,10 @@ var themes = {
             'type': 'class-styles',
             'color': '#0d0d0d'
         },
+        'projectDownloadsTitle': {
+            'type': 'class-styles',
+            'color': '#0d0d0d'
+        },
         'project': {
             'type': 'class-styles',
             'background-color': '#cdcdcd',
@@ -161,7 +169,7 @@ var themes = {
 if (getCookie('theme') != null) {
     theme = getCookie('theme');
     setTheme();
-    console.log('Set website theme to ' + theme + ' based on your saved settings')
+    //console.log('Set website theme to ' + theme + ' based on your saved settings')
 } else {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         theme = 'dark';
@@ -170,7 +178,7 @@ if (getCookie('theme') != null) {
     }
     setCookie('theme', theme, true, 365);
     setTheme();
-    console.log('Set website theme to ' + theme);
+    //console.log('Set website theme to ' + theme);
 }
 
 function setCookie(name, value, canExpire, expirationDays) {
@@ -212,7 +220,6 @@ function setTheme() {
         document.getElementById('themeIcon').setAttribute('src', "/assets/images/icons/moon.png")
     }
 
-    console.log(themes)
     var themeSettings = themes[theme];
     for (const [elemIdentifier, settings] of Object.entries(themeSettings)) {
         var elems = null;
@@ -234,7 +241,7 @@ function setTheme() {
             for (const [cssSetting, cssValue] of Object.entries(settings)) {
                 if (cssSetting != 'type') {
                     elem.style[cssSetting] = cssValue;
-                    console.log('Set ' + cssSetting + ' of ' + elem.tagName + ' to ' + cssValue);
+                    //console.log('Set ' + cssSetting + ' of ' + elem.tagName + ' to ' + cssValue);
                 }
             }
             editingAttributes = false;
@@ -245,7 +252,7 @@ function setTheme() {
             for (const [attribute, attributeValue] of Object.entries(settings)) {
                 if (attribute != 'type') {
                     elem.setAttribute(attribute, attributeValue);
-                    console.log('Set attribute ' + attribute + ' of ' + elem.tagName + ' to ' + attributeValue);
+                    //console.log('Set attribute ' + attribute + ' of ' + elem.tagName + ' to ' + attributeValue);
                 }
             }
         } else if (elemType == 'class-attributes') {
@@ -259,7 +266,7 @@ function setTheme() {
                 for (const [cssSetting, cssValue] of Object.entries(settings)) {
                     if (cssSetting != 'type') {
                         elem.style[cssSetting] = cssValue;
-                        console.log('Set ' + cssSetting + ' of ' + elem.tagName + ' to ' + cssValue);
+                        //console.log('Set ' + cssSetting + ' of ' + elem.tagName + ' to ' + cssValue);
                     }
                 }
             }
@@ -270,7 +277,7 @@ function setTheme() {
                 for (const [attribute, attributeValue] of Object.entries(settings)) {
                     if (attribute != 'type') {
                         elem.setAttribute(attribute, attributeValue);
-                        console.log('Set attribute ' + attribute + ' of ' + elem.tagName + ' to ' + attributeValue);
+                        //console.log('Set attribute ' + attribute + ' of ' + elem.tagName + ' to ' + attributeValue);
                     }
                 }
             }

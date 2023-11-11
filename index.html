@@ -42,7 +42,6 @@
                 <img src="./games/duck_hunt/duckhunt.icon.png" alt="Project logo" class="projectImg">
                 <h1 class="projectTitle">Duck Hunt</h1>
                 <h2 class="projectSubtitle"><i>A game I made 20% of at school</i></h2>
-                <h2 class="projectSubtitle"><i>Currently James Thompson holds record (282), with Grayson Goodwin in 2nd place (281)</i></h2>
     
                 <hr class="projectDivider">
     
@@ -234,17 +233,16 @@
     };
 
     function toggleDownloads(projectName) {
-        if (openDownloads.projectName) {
-            openDownloads.projectName = false
+        if (openDownloads[projectName]) {
+            openDownloads[projectName] = false
             document.getElementById(projectName + "-downloads").style.animation = '0.35s forwards 0s 1 slideDownloadsOutToLeft'
 
         } else {
-            openDownloads.projectName = true
+            openDownloads[projectName] = true
             document.getElementById(projectName + "-downloadDivider").style.display = 'revert'
             document.getElementById(projectName + "-downloads").style.display = 'revert'
 
             document.getElementById(projectName + "-downloads").style.animation = '0.35s ease-out 0s 1 slideInFromLeft'
-            //animation: 1s ease-out 0s 1 slideInFromLeft;
 
             var innerHTML = `
                 <h3 class="projectDownloadsTitle"><i>Downloads</i></h3>
@@ -258,11 +256,12 @@
                 `)
             }
 
-
             innerHTML = innerHTML.concat(`
                 </div>
             `)
             document.getElementById(projectName + "-downloads").innerHTML = innerHTML
+
+            setTheme()
         }
     }
 
