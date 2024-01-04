@@ -33,13 +33,15 @@ var themes = {
             'type': 'class-styles',
             'color': 'white',
             'background-color': '#696969',
-            'border': '3px solid #2c2c2c'
+            'border': '3px solid #2c2c2c',
+            'box-shadow': '0 0 10px 0 rgba(0, 0, 0, 0.3)'
         },
         'wikiTextSection': {
             'type': 'class-styles',
             'color': 'white',
             'background-color': '#696969',
-            'border': '3px solid #2c2c2c'
+            'border': '3px solid #2c2c2c',
+            'box-shadow': '0 0 10px 0 rgba(0, 0, 0, 0.3)'
         },
         'projectTitle': {
             'type': 'class-styles',
@@ -56,9 +58,14 @@ var themes = {
         'project': {
             'type': 'class-styles',
             'background-color': '#696969',
-            'border': '3px solid #2c2c2c'
+            'border': '3px solid #2c2c2c',
+            'box-shadow': '0 0 10px 0 rgba(0, 0, 0, 0.3)'
         },
         'projectDivider': {
+            'type': 'class-styles',
+            'border-top': '3px solid #353535'
+        },
+        'projectDownloadsDivider': {
             'type': 'class-styles',
             'border-top': '3px solid #353535'
         },
@@ -81,13 +88,25 @@ var themes = {
         'homeHeaderButtonImg': {
             'type': 'class-attributes',
             'src': '/assets/images/icons/home_white.png'
+        },
+        'projectButton': {
+            'type': 'class-styles',
+            'border-color': '#353535'
+        },
+        'projectDownloadButton': {
+            'type': 'class-styles',
+            'border-color': '#353535'
+        },
+        'subWikiButton': {
+            'type': 'class-styles',
+            'border-color': '#353535'
         }
     },
 
     'white': {
         'body': {
             'type': 'tag-styles',
-            'background-color': '#e4e4e4'
+            'background-color': '#f7f7f7'
         },
         'header': {
             'type': 'class-styles',
@@ -113,14 +132,16 @@ var themes = {
         'textSection': {
             'type': 'class-styles',
             'color': '#0d0d0d',
-            'background-color': '#cdcdcd',
-            'border': '3px solid #ffffff'
+            'background-color': '#f0f0f0',
+            'border': '3px solid #ffffff',
+            'box-shadow': '0 0 10px 0 rgba(143, 143, 143, 0.5)'
         },
         'wikiTextSection': {
             'type': 'class-styles',
             'color': '#0d0d0d',
-            'background-color': '#cdcdcd',
-            'border': '3px solid #ffffff'
+            'background-color': '#f0f0f0',
+            'border': '3px solid #ffffff',
+            'box-shadow': '0 0 10px 0 rgba(143, 143, 143, 0.5)'
         },
         'projectTitle': {
             'type': 'class-styles',
@@ -136,12 +157,17 @@ var themes = {
         },
         'project': {
             'type': 'class-styles',
-            'background-color': '#cdcdcd',
-            'border': '3px solid #ffffff'
+            'background-color': '#f0f0f0',
+            'border': '3px solid #ffffff',
+            'box-shadow': '0 0 10px 0 rgba(143, 143, 143, 0.5)'
         },
         'projectDivider': {
             'type': 'class-styles',
-            'border-top': '3px solid #818181'
+            'border-top': '3px solid #ffffff'
+        },
+        'projectDownloadsDivider': {
+            'type': 'class-styles',
+            'border-top': '3px solid #ffffff'
         },
         'githubButtonImg': {
             'type': 'class-attributes',
@@ -162,6 +188,18 @@ var themes = {
         'homeHeaderButtonImg': {
             'type': 'class-attributes',
             'src': '/assets/images/icons/home.png'
+        },
+        'projectButton': {
+            'type': 'class-styles',
+            'border-color': '#c6c6c6'
+        },
+        'projectDownloadButton': {
+            'type': 'class-styles',
+            'border-color': '#c6c6c6'
+        },
+        'subWikiButton': {
+            'type': 'class-styles',
+            'border-color': '#c6c6c6'
         }
     }
 };
