@@ -100,6 +100,10 @@ var themes = {
         'subWikiButton': {
             'type': 'class-styles',
             'border-color': '#353535'
+        },
+        'a': {
+            'type': 'tag-styles',
+            'color': '#ffffff'
         }
     },
 
@@ -200,6 +204,10 @@ var themes = {
         'subWikiButton': {
             'type': 'class-styles',
             'border-color': '#c6c6c6'
+        },
+        'a': {
+            'type': 'tag-styles',
+            'color': 'black'
         }
     }
 };
@@ -209,11 +217,7 @@ if (getCookie('theme') != null) {
     setTheme();
     //console.log('Set website theme to ' + theme + ' based on your saved settings')
 } else {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
-    } else {
-        theme = 'white';
-    }
+    theme = 'auto';
     setCookie('theme', theme, true, 365);
     setTheme();
     //console.log('Set website theme to ' + theme);
@@ -251,14 +255,35 @@ function getCookie(name) {
 
 // THEMES
 function setTheme() {
-    // set theme button
+    let selectedTheme = '';
+    let themeIcon = document.getElementById('themeIcon');
+
+    // set theme button and class list
     if (theme == 'dark') {
-        document.getElementById('themeIcon').setAttribute('src', "/assets/images/icons/sun.png")
+        themeIcon.setAttribute('src', "/assets/images/icons/moon.png")
+        themeIcon.title = "Current theme: dark";
+        document.documentElement.classList.add("dark");
+        selectedTheme = 'dark';
     } else if (theme == 'white') {
-        document.getElementById('themeIcon').setAttribute('src', "/assets/images/icons/moon.png")
+        themeIcon.setAttribute('src', "/assets/images/icons/sun.png")
+        themeIcon.title = "Current theme: light";
+        document.documentElement.classList.remove("dark");
+        selectedTheme = 'white';
+    } else if (theme == 'auto') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            themeIcon.setAttribute('src', "/assets/images/icons/auto_white.png")
+            themeIcon.title = "Current theme: auto (dark)";
+            document.documentElement.classList.add("dark");
+            selectedTheme = 'dark';
+        } else {
+            themeIcon.setAttribute('src', "/assets/images/icons/auto.png")
+            themeIcon.title = "Current theme: auto (light)";
+            document.documentElement.classList.remove("dark");
+            selectedTheme = 'white';
+        }
     }
 
-    var themeSettings = themes[theme];
+    var themeSettings = themes[selectedTheme];
     for (const [elemIdentifier, settings] of Object.entries(themeSettings)) {
         var elems = null;
         var elem = null;
@@ -332,6 +357,8 @@ function toggleTheme() {
     if (theme == 'white') {
         theme = 'dark';
     } else if (theme == 'dark') {
+        theme = 'auto';
+    } else if (theme == 'auto') {
         theme = 'white';
     }
     saveTheme(theme);

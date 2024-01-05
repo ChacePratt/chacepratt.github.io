@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+    <link rel="icon" href="/assets/images/icons/scrapmechanic.png">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>Scrap Mechanic Tools and Resources</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 class="wikiTitle">Scrap Mechanic Tools and Resources</h1>
+        <button onclick="toggleTheme()" id="themeButton" class="themeButton" title="Theme"><img id="themeIcon" class="themeButtonImg" src="/assets/images/icons/sun.png" alt="Theme icon"></button>
+        <button onclick="redirect('/')" class="homeHeaderButton" title="Home"><img class="homeHeaderButtonImg" src="/assets/images/icons/home_white.png" alt="Home icon"></button>
+    </header>
+
+    <div id="content" class="content">
+        <p class="textSection">Any tools and resources I make in order to assist in Scrap Mechanic mod development can be found here.</p>
+
+        <div class="projects" id="projects">
+            <!-- MyGUI Layout Converter -->
+            <div class="project">
+                <h1 class="projectTitle">MyGUI Layout Converter</h1>
+                <h2 class="projectSubtitle"><i>Make your GUIs compatible with every resolution</i></h2>
+    
+                <hr class="projectDivider">
+    
+                <div class="projectButtons">
+                    <button onclick="redirect('./layoutconverter/index.html')" class="projectButton">Use</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/scripts/repositionBody.js"></script>
+<script src="/scripts/redirects.js"></script>
+<script src="/scripts/themeManager.js"></script>

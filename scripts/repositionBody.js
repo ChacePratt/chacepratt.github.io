@@ -1,5 +1,5 @@
 // Set content position based on header
-var contentTopMargin = 10;
+var contentTopMargin = 0;
 
 var headerHeight = getComputedStyle(document.getElementById("header")).height.replace('px', '')
 var contentHeight = getComputedStyle(document.getElementById("content")).height.replace('px', '')

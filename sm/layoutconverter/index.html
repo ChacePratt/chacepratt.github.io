@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css"/>
+    <link rel="icon" href="/assets/images/icons/scrapmechanic.png">
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <title>MyGUI Layout Converter</title>
+    <script type="module" crossorigin src="./assets/index-M04nOdZk.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-7NJ36AfK.css">
+</head>
+<body class="h-screen flex flex-col">
+    <header class="header" id="header">
+        <h1 class="wikiTitle" onclick="redirect('/sm/index.html')">Scrap Mechanic Tools and Resources</h1>
+        <button onclick="toggleTheme()" id="themeButton" class="themeButton" title="Theme"><img id="themeIcon" class="themeButtonImg" src="/assets/images/icons/sun.png" alt="Theme icon"></button>
+        <button onclick="redirect('/sm/index.html')" class="homeHeaderButton" title="Home"><img class="homeHeaderButtonImg" src="/assets/images/icons/home_white.png" alt="Home icon"></button>
+    </header>
+
+    <div id="content" class="content flex flex-col flex-1 no-top-margin" style="position: relative;">
+        <div id="app" class="flex flex-col flex-1 gap-12 justify-center items-center py-8 appbody">
+            <h1 class="text-2xl font-semibold dark:text-white">MyGUI Layout Converter</h1>
+            <p class="text-lg text-center w-full md:w-3/4 lg:w-1/2 dark:text-white">
+                To use, choose your desired .layout file made in the MyGUI Layout Editor and press the convert button to convert all of the position and size data to percentages rather than pixels. <br> <br>
+                Why does this tool exist? By default, the MyGUI Layout Editor saves the sizing and postion of each widget in a layout file in pixels, which can cause GUIs to shift when viewed with a display resolution other than the workspace resolution they were made with. <br>
+                This means that if you design the .layout file with a workspace resolution of 1080p (the default), your layout will shift whenever the resolution of Scrap Mechanic is set below or above 1080p. <br> 
+                This tool exists to solve that problem by converting all layout positions and sizes to percentages, which apply to every display resolution.
+            </p>
+    
+            <div class="flex flex-col w-3/4 md:w-3/5 lg:w-2/5 gap-3">
+                <input class="lc-input" type="file" name="file" id="file" accept=".layout">
+                <label class="lc-label" for="layoutWidth">
+                    Original Layout Workspace Width
+                    <input class="lc-input" type="number" id="layoutWidth" placeholder="1920" value="1920" title="Does not have to be exact, just needs to share the same aspect ratio and be equal to or larger than the original width">
+                </label>
+                <label class="lc-label" for="layoutHeight">
+                    Original Layout Workspace Height
+                    <input class="lc-input" type="number" id="layoutHeight" placeholder="1080" value="1080" title="Does not have to be exact, just needs to share the same aspect ratio and be equal to or larger than the original height">
+                </label> 
+                <button class="lc-button" id="convert">Convert</button>
+                <p id="output"></p>
+                <ul class="flex flex-col text-center w-full gap-3 error" id="errorLog"></ul>
+            </div>
+    
+            <div class="text-center flex flex-col gap-1 dark:text-white">
+                <p>Made by <a class="lc-a" target="_blank" href="https://github.com/Gitko01/">Chace Pratt / Gitko</a></p>
+                <p>v1.0.0 - Jan. 4, 2024</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/scripts/repositionBody.js"></script>
+<script src="/scripts/redirects.js"></script>
+<script src="/scripts/themeManager.js"></script>
