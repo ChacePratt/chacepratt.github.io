@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <title>MyGUI Layout Converter</title>
-    <script type="module" crossorigin src="./assets/index-M04nOdZk.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-7NJ36AfK.css">
+    <script type="module" crossorigin src="./assets/index-CMD3FvtD.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-erT5Pgl_.css">
 </head>
 <body class="h-screen flex flex-col">
     <header class="header" id="header">
@@ -23,14 +23,14 @@
         <div id="app" class="flex flex-col flex-1 gap-12 justify-center items-center py-8 appbody">
             <h1 class="text-2xl font-semibold dark:text-white">MyGUI Layout Converter</h1>
             <p class="text-lg text-center w-full md:w-3/4 lg:w-1/2 dark:text-white">
-                To use, choose your desired .layout file made in the MyGUI Layout Editor and press the convert button to convert all of the position and size data to percentages rather than pixels. <br> <br>
+                To use, choose your desired .layout file(s) made in the MyGUI Layout Editor and press the convert button to convert all of the position and size data to percentages rather than pixels. <br> <br>
                 Why does this tool exist? By default, the MyGUI Layout Editor saves the sizing and postion of each widget in a layout file in pixels, which can cause GUIs to shift when viewed with a display resolution other than the workspace resolution they were made with. <br>
-                This means that if you design the .layout file with a workspace resolution of 1080p (the default), your layout will shift whenever the resolution of Scrap Mechanic is set below or above 1080p. <br> 
+                This means that if you design a .layout file with a workspace resolution of 1080p (the default), your layout will shift whenever the resolution of Scrap Mechanic is set below or above 1080p. <br> 
                 This tool exists to solve that problem by converting all layout positions and sizes to percentages, which apply to every display resolution.
             </p>
-    
+
             <div class="flex flex-col w-3/4 md:w-3/5 lg:w-2/5 gap-3">
-                <input class="lc-input" type="file" name="file" id="file" accept=".layout">
+                <input class="lc-input" type="file" name="file" id="file" accept=".layout" multiple>
                 <label class="lc-label" for="layoutWidth">
                     Original Layout Workspace Width
                     <input class="lc-input" type="number" id="layoutWidth" placeholder="1920" value="1920" title="Does not have to be exact, just needs to share the same aspect ratio and be equal to or larger than the original width">
@@ -40,13 +40,44 @@
                     <input class="lc-input" type="number" id="layoutHeight" placeholder="1080" value="1080" title="Does not have to be exact, just needs to share the same aspect ratio and be equal to or larger than the original height">
                 </label> 
                 <button class="lc-button" id="convert">Convert</button>
-                <p id="output"></p>
-                <ul class="flex flex-col text-center w-full gap-3 error" id="errorLog"></ul>
+                <label class="lc-label-row" for="autoDownload" title="Automatically download the file when it finishes converting">
+                    Auto Download
+                    <input type="checkbox" name="autoDownload" id="autoDownload">
+                </label>
+
+                <div class="flex flex-col gap-2" id="fileListHeader">
+                    <div class="flex flex-row gap-4 lc-text">
+                        <h2 class="flex-grow font-semibold">Log</h2>
+                        <button id="clearLog">Clear</button>
+                    </div>
+                    
+                    <hr class="lc-hr">
+                </div>
+                <ul class="flex flex-col text-center w-full gap-3" id="outputLog"></ul>
+
+                <div class="flex flex-col gap-2" id="fileListHeader">
+                    <div class="flex flex-row gap-4 lc-text">
+                        <h2 class="flex-grow font-semibold">Completed Files</h2>
+                        <button id="downloadAll">Download All</button>
+                        <button id="dismissAll">Dismiss All</button>
+                    </div>
+                    <hr class="lc-hr">
+                </div>
+
+                <ul class="flex flex-col text-center w-full gap-3 lc-text" id="fileList"></ul>
             </div>
-    
+
             <div class="text-center flex flex-col gap-1 dark:text-white">
                 <p>Made by <a class="lc-a" target="_blank" href="https://github.com/Gitko01/">Chace Pratt / Gitko</a></p>
-                <p>v1.0.0 - Jan. 4, 2024</p>
+                <p>v1.1.0 - Jan. 7, 2024</p>
+                <!-- <div class="flex flex-row gap-2 justify-center content-center items-center mt-2">
+                    <p>Theme: </p>
+                    <select class="lc-select" name="theme" id="theme">
+                        <option value="os" title="Automatically select theme based on OS preferences">Auto</option>
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>      
+                    </select>
+                </div> -->
             </div>
         </div>
     </div>
