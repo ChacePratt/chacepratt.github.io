@@ -14,6 +14,7 @@ function redirectGithub(repoName, replace) {
     }
 }
 
+// ONLY use if page already has a <a> link to it (SEO friendliness)
 function redirect(page, replace) {
     if (replace) {
         window.location.replace(page)

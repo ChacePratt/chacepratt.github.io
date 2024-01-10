@@ -101,8 +101,8 @@ var themes = {
             'type': 'class-styles',
             'border-color': '#353535'
         },
-        'a': {
-            'type': 'tag-styles',
+        'link': {
+            'type': 'class-styles',
             'color': '#ffffff'
         }
     },
@@ -205,8 +205,8 @@ var themes = {
             'type': 'class-styles',
             'border-color': '#c6c6c6'
         },
-        'a': {
-            'type': 'tag-styles',
+        'link': {
+            'type': 'class-styles',
             'color': 'black'
         }
     }

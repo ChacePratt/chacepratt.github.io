@@ -36,12 +36,12 @@
     }
 }  
 
-a {
+.link:not(.projectButton) {
     color: white;
     transition: 0.1s;
 }
 
-a:focus {
+.link:focus:not(.projectButton) {
     color: rgb(58, 104, 255);
 }
 
@@ -148,6 +148,8 @@ body {
     border: 3px solid #353535;
     padding: 4px 8px;
     transition: 0.1s;
+    text-align: center;
+    text-decoration: none;
 }
 
 .subWikiButton:hover {
@@ -357,6 +359,8 @@ body {
     border: 3px solid #353535;
     padding: 4px 8px;
     transition: 0.1s;
+    text-align: center;
+    text-decoration: none;
 }
 
 .projectButton:hover {
