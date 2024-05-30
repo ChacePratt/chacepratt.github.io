@@ -2,6 +2,11 @@ function openGithubPage(repoName) {
     window.open("https://github.com/Gitko01/" + repoName, '_blank')
 }
 
+function openGithubReleasePage(repoName) {
+    window.open("https://github.com/Gitko01/" + repoName + "/releases", '_blank')
+}
+
+
 function openPage(page) {
     window.open(page)
 }

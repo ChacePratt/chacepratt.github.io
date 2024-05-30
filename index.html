@@ -41,11 +41,8 @@
     
                 <div class="projectButtons">
                     <button onclick="openGithubPage('PyBackup')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
-                    <button onclick="toggleDownloads('PyBackup')" class="projectButton">Download</button>
+                    <button onclick="openGithubReleasePage('PyBackup')" class="projectButton">Download</button>
                 </div>
-    
-                <hr id="PyBackup-downloadDivider" class="projectDownloadsDivider">
-                <div id="PyBackup-downloads" class="projectDownloads"></div>
             </div>
 
             <!-- Teleporters -->
@@ -88,12 +85,9 @@
                     <button onclick="openGithubPage('BelowBedrockCaves')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
                     <button onclick="openPage('https://www.curseforge.com/minecraft/mc-mods/the-below-bedrock-caves')" class="curseForgeButton" title="CurseForge"><img class="curseForgeButtonImg" src="./assets/images/icons/curseforge_white.png" alt="CurseForge logo"></button>
                     <button onclick="openPage('https://modrinth.com/mod/the_below_bedrock_caves')" class="modrinthButton" title="Modrinth"><img class="modrinthButtonImg" src="./assets/images/icons/modrinth_white.png" alt="Modrinth logo"></button>
-                    <button onclick="toggleDownloads('BelowBedrockCaves')" class="projectButton">Download</button>
+                    <button onclick="openGithubReleasePage('BelowBedrockCaves')" class="projectButton">Download</button>
                     <a href="./wikis/tbbc/index.html" class="projectButton">Wiki</a>
                 </div>
-
-                <hr id="BelowBedrockCaves-downloadDivider" class="projectDownloadsDivider">
-                <div id="BelowBedrockCaves-downloads" class="projectDownloads"></div>
             </div>
             
             <!-- Hullabaloo -->
@@ -108,11 +102,22 @@
                     <button onclick="openGithubPage('Hullabaloo')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
                     <button onclick="openPage('https://www.curseforge.com/minecraft/mc-mods/hullabaloo')" class="curseForgeButton" title="CurseForge"><img class="curseForgeButtonImg" src="./assets/images/icons/curseforge_white.png" alt="CurseForge logo"></button>
                     <button onclick="openPage('https://modrinth.com/mod/hullabaloo')" class="modrinthButton" title="Modrinth"><img class="modrinthButtonImg" src="./assets/images/icons/modrinth_white.png" alt="Modrinth logo"></button>
-                    <button onclick="toggleDownloads('Hullabaloo')" class="projectButton">Download</button>
+                    <button onclick="openGithubReleasePage('Hullabaloo')" class="projectButton">Download</button>
                 </div>
+            </div>
 
-                <hr id="Hullabaloo-downloadDivider" class="projectDownloadsDivider">
-                <div id="Hullabaloo-downloads" class="projectDownloads"></div>
+            <!-- Minecraft Mod Counter -->
+            <div class="project">
+                <img src="./assets/images/logos/minecraftmodcounter.png" alt="Project logo" class="projectImg">
+                <h1 class="projectTitle">Minecraft Mod Counter</h1>
+                <h2 class="projectSubtitle"><i>A simple Rust console application that counts the amount of published mods on CurseForge</i></h2>
+    
+                <hr class="projectDivider">
+    
+                <div class="projectButtons">
+                    <button onclick="openGithubPage('MinecraftModCounter')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
+                    <button onclick="openGithubReleasePage('MinecraftModCounter')" class="projectButton">Download</button>
+                </div>
             </div>
         </div>
 
@@ -132,11 +137,8 @@
                     <button onclick="openGithubPage('BlockActivators')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
                     <button onclick="openPage('https://www.curseforge.com/minecraft/mc-mods/block-activators')" class="curseForgeButton" title="CurseForge"><img class="curseForgeButtonImg" src="./assets/images/icons/curseforge_white.png" alt="CurseForge logo"></button>
                     <button onclick="openPage('https://modrinth.com/mod/block_activators')" class="modrinthButton" title="Modrinth"><img class="modrinthButtonImg" src="./assets/images/icons/modrinth_white.png" alt="Modrinth logo"></button>
-                    <button onclick="toggleDownloads('BlockActivators')" class="projectButton">Download</button>
+                    <button onclick="openGithubReleasePage('BlockActivators')" class="projectButton">Download</button>
                 </div>
-    
-                <hr id="BlockActivators-downloadDivider" class="projectDownloadsDivider">
-                <div id="BlockActivators-downloads" class="projectDownloads"></div>
             </div>
 
             <!-- Vacuum Hopper -->
@@ -152,115 +154,13 @@
                     <button onclick="openGithubPage('VacuumHopper')" class="githubButton" title="GitHub"><img class="githubButtonImg" src="./assets/images/icons/github_white.png" alt="GitHub logo"></button>
                     <button onclick="openPage('https://www.curseforge.com/minecraft/mc-mods/vacuum-hopper')" class="curseForgeButton" title="CurseForge"><img class="curseForgeButtonImg" src="./assets/images/icons/curseforge_white.png" alt="CurseForge logo"></button>
                     <button onclick="openPage('https://modrinth.com/mod/vacuum_hopper')" class="modrinthButton" title="Modrinth"><img class="modrinthButtonImg" src="./assets/images/icons/modrinth_white.png" alt="Modrinth logo"></button>
-                    <button onclick="toggleDownloads('VacuumHopper')" class="projectButton">Download</button>
+                    <button onclick="openGithubReleasePage('VacuumHopper')" class="projectButton">Download</button>
                 </div>
-    
-                <hr id="VacuumHopper-downloadDivider" class="projectDownloadsDivider">
-                <div id="VacuumHopper-downloads" class="projectDownloads"></div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
-<script>
-    // Downloads
-    var openDownloads = {
-        'PyBackup': false,
-        'BelowBedrockCaves': false,
-        'Hullabaloo': false,
-        'BlockActivators': false,
-        'VacuumHopper': false
-    }
-    var downloads = {
-        'PyBackup': {
-            'v1.0.0': 'PyBackup.zip'
-        },
-        'BelowBedrockCaves': {
-            'v1.0.0-mc1.19.1': 'below-bedrock-caves-1.0.0-1.19.1.jar',
-            'v1.0.0-mc1.19.2': 'below-bedrock-caves-1.0.0-1.19.2.jar',
-            'v1.0.1-mc1.19.2': 'below-bedrock-caves-1.0.1-1.19.2.jar',
-            'v1.0.1-mc1.19.4': 'below-bedrock-caves-1.0.1-1.19.4.jar',
-            'v1.0.1-mc1.20.1': 'below-bedrock-caves-1.0.1-1.20.1.jar',
-            'v1.0.1-mc1.20.2': 'below-bedrock-caves-1.0.1-1.20.2.jar',
-            'v1.1.0-mc1.19.2': 'below-bedrock-caves-1.1.0-mc1.19.2.jar',
-            'v1.1.0-mc1.19.4': 'below-bedrock-caves-1.1.0-mc1.19.4.jar',
-            'v1.1.0-mc1.20.1': 'below-bedrock-caves-1.1.0-mc1.20.1.jar',
-            'v1.1.0-mc1.20.2': 'below-bedrock-caves-1.1.0-mc1.20.2.jar',
-            'v1.2.0-mc1.19.2': 'below-bedrock-caves-1.2.0-mc1.19.2.jar',
-            'v1.2.0-mc1.19.4': 'below-bedrock-caves-1.2.0-mc1.19.4.jar',
-            'v1.2.0-mc1.20.1': 'below-bedrock-caves-1.2.0-mc1.20.1.jar',
-            'v1.2.0-mc1.20.2': 'below-bedrock-caves-1.2.0-mc1.20.2.jar'
-        },
-        'Hullabaloo': {
-            'v1.0.0-mc1.19.2': 'hullabaloo-1.0.0-mc1.19.2.jar',
-            'v1.0.0-mc1.19.4': 'hullabaloo-1.0.0-mc1.19.4.jar',
-            'v1.0.0-mc1.20.1': 'hullabaloo-1.0.0-mc1.20.1.jar',
-            'v1.0.0-mc1.20.2': 'hullabaloo-1.0.0-mc1.20.2.jar',
-            'v1.0.0+1.20.4': 'hullabaloo-1.0.0+1.20.4.jar'
-        },
-        'BlockActivators': {
-            'v1.2.0-mc1.19.2': 'block_activators-1.2.0-1.19.2.jar',
-            'v1.2.1-mc1.19.2': 'block_activators-1.2.1-1.19.2.jar',
-            'v1.2.2-mc1.19.2': 'block_activators-1.2.2-1.19.2.jar',
-            'v1.3.0-mc1.19.2': 'block_activators-1.3.0-1.19.2.jar',
-            'v1.3.0-mc1.19.4': 'block_activators-1.3.0-1.19.4.jar'
-        },
-        'VacuumHopper': {
-            'v1.0.0-mc1.19.2': 'vacuum_hopper-1.0.0-1.19.2.jar',
-            'v1.0.0-mc1.19.4': 'vacuum_hopper-1.0.0-1.19.4.jar',
-            'v1.0.1-mc1.19.2': 'vacuum_hopper-1.0.1-1.19.2.jar',
-            'v1.0.1-mc1.19.4': 'vacuum_hopper-1.0.1-1.19.4.jar'
-        }
-    }
-
-    addEventListener("animationend", (event) => {});
-    onanimationend = (event) => {
-        if (event.animationName == 'slideDownloadsOutToLeft') {
-            var elem = event.srcElement;
-            elem.style.display = 'none'
-
-            document.getElementById(elem.id.replace('-downloads', '-downloadDivider')).style.display = 'none'
-        }
-    };
-
-    function toggleDownloads(projectName) {
-        if (openDownloads[projectName]) {
-            openDownloads[projectName] = false
-            document.getElementById(projectName + "-downloads").style.animation = '0.35s forwards 0s 1 slideDownloadsOutToLeft'
-
-        } else {
-            openDownloads[projectName] = true
-            document.getElementById(projectName + "-downloadDivider").style.display = 'revert'
-            document.getElementById(projectName + "-downloads").style.display = 'revert'
-
-            document.getElementById(projectName + "-downloads").style.animation = '0.35s ease-out 0s 1 slideInFromLeft'
-
-            var innerHTML = `
-                <h3 class="projectDownloadsTitle"><i>Downloads</i></h3>
-                <div class="projectDownloadsButtons">
-            `
-
-            var projectDownloads = downloads[projectName]
-            for (const [version, fileName] of Object.entries(projectDownloads)) {
-                innerHTML = innerHTML.concat(`
-                    <button class="projectDownloadButton" onclick="download('./assets/releases/${fileName}')">${version}</button>
-                `)
-            }
-
-            innerHTML = innerHTML.concat(`
-                </div>
-            `)
-            document.getElementById(projectName + "-downloads").innerHTML = innerHTML
-
-            setTheme()
-        }
-    }
-
-    function download(filePath) {
-        window.location = filePath
-    }
-</script>
 
 <script src="/scripts/repositionBody.js"></script>
 <script src="/scripts/redirects.js"></script>
