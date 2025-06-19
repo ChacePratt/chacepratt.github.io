@@ -1,9 +1,9 @@
 function openGithubPage(repoName) {
-    window.open("https://github.com/Gitko01/" + repoName, '_blank')
+    window.open("https://github.com/ChacePratt/" + repoName, '_blank')
 }
 
 function openGithubReleasePage(repoName) {
-    window.open("https://github.com/Gitko01/" + repoName + "/releases", '_blank')
+    window.open("https://github.com/ChacePratt/" + repoName + "/releases", '_blank')
 }
 
 
@@ -13,9 +13,9 @@ function openPage(page) {
 
 function redirectGithub(repoName, replace) {
     if (replace) {
-        window.location.replace("https://github.com/Gitko01/" + repoName)
+        window.location.replace("https://github.com/ChacePratt/" + repoName)
     } else {
-        window.location.href = "https://github.com/Gitko01/" + repoName
+        window.location.href = "https://github.com/ChacePratt/" + repoName
     }
 }
 
